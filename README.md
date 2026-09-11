@@ -68,7 +68,7 @@ Con la semilla 123: 2,000,000 nodos, 37,276,447 amistades, grado medio 37, grado
 No depende de OpenMP:
 
 ```bash
-clang++ -std=c++20 -O3 secuencial/bfs_seq.cpp comun/grafo.cpp comun/nombres.cpp -o secuencial/bfs_seq
+clang++ -std=c++20 -O3 secuencial/bfs_seq.cpp comun/main_bfs.cpp comun/grafo.cpp comun/nombres.cpp -o secuencial/bfs_seq
 ```
 
 ### Paralelo — macOS (Apple Silicon)
@@ -83,13 +83,13 @@ brew install libomp
 clang++ -std=c++20 -O3 -Xpreprocessor -fopenmp \
         -I$(brew --prefix libomp)/include \
         -L$(brew --prefix libomp)/lib -lomp \
-        paralelo/bfs_par.cpp comun/grafo.cpp comun/nombres.cpp -o paralelo/bfs_par
+        paralelo/bfs_par.cpp comun/main_bfs.cpp comun/grafo.cpp comun/nombres.cpp -o paralelo/bfs_par
 ```
 
 ### Paralelo — Linux
 
 ```bash
-g++ -std=c++20 -O3 -fopenmp paralelo/bfs_par.cpp comun/grafo.cpp comun/nombres.cpp -o paralelo/bfs_par
+g++ -std=c++20 -O3 -fopenmp paralelo/bfs_par.cpp comun/main_bfs.cpp comun/grafo.cpp comun/nombres.cpp -o paralelo/bfs_par
 ```
 
 ## Ejecución
@@ -107,3 +107,17 @@ OMP_NUM_THREADS=10 OMP_SCHEDULE="dynamic,64" ./paralelo/bfs_par datos/grafo.txt 
 
 El paralelo se compila con `schedule(runtime)`, de modo que la estrategia de
 scheduling se cambia mediante la variable de entorno `OMP_SCHEDULE` sin recompilar.
+
+### Modo lote (benchmark)
+
+Carga el grafo una sola vez y resuelve todos los pares de un archivo, reportando el
+tiempo total por repetición. Es el modo que usan los scripts de `bench/`:
+
+```bash
+./secuencial/bfs_seq datos/grafo.txt --lote bench/pares.txt --repeticiones 12
+```
+
+```bash
+OMP_NUM_THREADS=10 OMP_SCHEDULE="dynamic,64" ./paralelo/bfs_par datos/grafo.txt --lote bench/pares.txt --repeticiones 12
+```
+
