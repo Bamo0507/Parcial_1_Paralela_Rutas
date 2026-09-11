@@ -63,7 +63,15 @@ Con la semilla 123: 2,000,000 nodos, 37,276,447 amistades, grado medio 37, grado
 
 ## Compilación
 
-### macOS (Apple Silicon)
+### Secuencial
+
+No depende de OpenMP:
+
+```bash
+clang++ -std=c++20 -O3 secuencial/bfs_seq.cpp comun/grafo.cpp comun/nombres.cpp -o secuencial/bfs_seq
+```
+
+### Paralelo — macOS (Apple Silicon)
 
 Apple Clang no trae OpenMP habilitado por defecto; requiere `libomp`:
 
@@ -75,20 +83,27 @@ brew install libomp
 clang++ -std=c++20 -O3 -Xpreprocessor -fopenmp \
         -I$(brew --prefix libomp)/include \
         -L$(brew --prefix libomp)/lib -lomp \
-        paralelo/bfs_par.cpp comun/grafo.cpp -o paralelo/bfs_par
+        paralelo/bfs_par.cpp comun/grafo.cpp comun/nombres.cpp -o paralelo/bfs_par
 ```
 
-### Linux
+### Paralelo — Linux
 
 ```bash
-g++ -std=c++20 -O3 -fopenmp paralelo/bfs_par.cpp comun/grafo.cpp -o paralelo/bfs_par
+g++ -std=c++20 -O3 -fopenmp paralelo/bfs_par.cpp comun/grafo.cpp comun/nombres.cpp -o paralelo/bfs_par
 ```
 
 ## Ejecución
 
+Ambos binarios reciben el grafo, el usuario origen, el usuario destino y opcionalmente
+el archivo de nombres para imprimir el camino con nombres en vez de ids:
+
 ```bash
-OMP_NUM_THREADS=10 OMP_SCHEDULE="dynamic,64" ./paralelo/bfs_par datos/grafo.txt
+./secuencial/bfs_seq datos/grafo.txt 0 1999999 datos/nombres.txt
 ```
 
-Ambos binarios se compilan con `schedule(runtime)`, de modo que la estrategia de
+```bash
+OMP_NUM_THREADS=10 OMP_SCHEDULE="dynamic,64" ./paralelo/bfs_par datos/grafo.txt 0 1999999 datos/nombres.txt
+```
+
+El paralelo se compila con `schedule(runtime)`, de modo que la estrategia de
 scheduling se cambia mediante la variable de entorno `OMP_SCHEDULE` sin recompilar.
