@@ -4,8 +4,8 @@ Consultoría de optimización de software
 
 ## Integrantes
 
-- Bryan Alberto Martínez Orellana — 23542
-- Adriana Sophia Palacios Contreras
+- Bryan Alberto Martínez Orellana - 23542
+- Adriana Sophia Palacios Contreras - 23044
 
 ## Problema asignado
 
@@ -43,15 +43,23 @@ pip install -r requirements.txt
 
 ## Generación de los datos
 
-El grafo **no está versionado**: pesa alrededor de 370 MB y GitHub rechaza el push de
+El grafo **no está versionado**: pesa alrededor de 530 MB y GitHub rechaza el push de
 cualquier archivo mayor a 100 MB. Lo que se versiona es el generador, no su salida.
 
 Como el generador es determinista, ambos integrantes obtienen un grafo idéntico
 usando la misma semilla:
 
 ```bash
-python generador/generador.py --seed 123 --salida datos/grafo.txt
+python generador/generador.py --seed 123 --salida datos/
 ```
+
+Produce en `datos/`:
+
+- `grafo.txt` — cabecera `N M`, luego una amistad por línea `u v` con `u < v`
+- `nombres.txt` — una persona por línea: `id nombre apellido apellido`
+- `meta.json` — parámetros de generación y estadísticas del grafo resultante
+
+Con la semilla 123: 2,000,000 nodos, 37,276,447 amistades, grado medio 37, grado máximo 33,532.
 
 ## Compilación
 

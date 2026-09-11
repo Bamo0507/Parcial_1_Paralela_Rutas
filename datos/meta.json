@@ -1,0 +1,55 @@
+{
+  "semilla": 123,
+  "nodos": 2000000,
+  "aristas": 37276447,
+  "grado_medio": 37.28,
+  "grado_max": 33532,
+  "grado_min": 1,
+  "buckets": {
+    "unidades": {
+      "rango": [
+        1,
+        9
+      ],
+      "nodos": 1599299,
+      "porcentaje": 79.965
+    },
+    "decenas": {
+      "rango": [
+        10,
+        99
+      ],
+      "nodos": 350612,
+      "porcentaje": 17.5306
+    },
+    "centenas": {
+      "rango": [
+        100,
+        999
+      ],
+      "nodos": 46138,
+      "porcentaje": 2.3069
+    },
+    "miles": {
+      "rango": [
+        1000,
+        9999
+      ],
+      "nodos": 3752,
+      "porcentaje": 0.1876
+    },
+    "decenas_de_miles": {
+      "rango": [
+        10000,
+        50000
+      ],
+      "nodos": 199,
+      "porcentaje": 0.01
+    }
+  },
+  "descartadas": {
+    "auto_loops": 2252,
+    "duplicadas": 2327013
+  },
+  "segundos_generacion": 54.8
+}
