@@ -9,9 +9,6 @@ paralelo/bfs_par
 *.o
 *.dSYM/
 
-# Resultados crudos del benchmark
-bench/resultados/*.csv
-
 # Python
 __pycache__/
 *.pyc
