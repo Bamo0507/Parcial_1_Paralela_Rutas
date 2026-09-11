@@ -1,0 +1,10 @@
+quien: Bryan
+fecha: 2026-09-10 23:46:20
+sistema: Darwin 24.1.0 arm64
+cpu: Apple M4
+threads maximos: 10
+compilador: Apple clang version 16.0.0 (clang-1600.0.26.6)
+grafo: datos/grafo.txt
+pares: bench/pares.txt (100 consultas)
+repeticiones: 12 (se descartan las primeras 2)
+schedule ganador: dynamic,64

@@ -1,0 +1,233 @@
+### secuencial threads=1 schedule=static
+carga: 1.12 s  (2000000 nodos, 37276447 amistades)
+pares: 100
+repeticion 1: 7.8316 s
+repeticion 2: 7.3652 s
+repeticion 3: 7.5458 s
+repeticion 4: 7.1641 s
+repeticion 5: 9.1330 s
+repeticion 6: 8.2629 s
+repeticion 7: 10.8918 s
+repeticion 8: 8.2265 s
+repeticion 9: 8.7244 s
+repeticion 10: 9.0618 s
+repeticion 11: 7.9241 s
+repeticion 12: 7.7767 s
+suma_distancias: 317
+
+### paralelo threads=10 schedule=static
+carga: 1.11 s  (2000000 nodos, 37276447 amistades)
+threads: 10  schedule: static,0
+pares: 100
+repeticion 1: 3.3197 s
+repeticion 2: 3.2196 s
+repeticion 3: 3.1734 s
+repeticion 4: 3.2982 s
+repeticion 5: 3.2048 s
+repeticion 6: 3.1795 s
+repeticion 7: 3.1712 s
+repeticion 8: 3.3021 s
+repeticion 9: 3.1861 s
+repeticion 10: 3.1828 s
+repeticion 11: 3.4318 s
+repeticion 12: 3.3641 s
+suma_distancias: 317
+
+### paralelo threads=10 schedule=guided
+carga: 0.99 s  (2000000 nodos, 37276447 amistades)
+threads: 10  schedule: guided,1
+pares: 100
+repeticion 1: 3.0433 s
+repeticion 2: 3.0639 s
+repeticion 3: 2.9096 s
+repeticion 4: 2.9857 s
+repeticion 5: 3.0240 s
+repeticion 6: 3.2109 s
+repeticion 7: 3.1028 s
+repeticion 8: 3.0318 s
+repeticion 9: 3.1082 s
+repeticion 10: 3.0386 s
+repeticion 11: 3.1173 s
+repeticion 12: 2.9727 s
+suma_distancias: 317
+
+### paralelo threads=10 schedule=dynamic,1
+carga: 1.07 s  (2000000 nodos, 37276447 amistades)
+threads: 10  schedule: dynamic,1
+pares: 100
+repeticion 1: 3.7372 s
+repeticion 2: 3.9410 s
+repeticion 3: 3.8071 s
+repeticion 4: 3.8585 s
+repeticion 5: 3.9665 s
+repeticion 6: 3.7909 s
+repeticion 7: 3.8554 s
+repeticion 8: 3.7062 s
+repeticion 9: 3.7296 s
+repeticion 10: 4.2397 s
+repeticion 11: 3.9354 s
+repeticion 12: 3.8796 s
+suma_distancias: 317
+
+### paralelo threads=10 schedule=dynamic,16
+carga: 1.03 s  (2000000 nodos, 37276447 amistades)
+threads: 10  schedule: dynamic,16
+pares: 100
+repeticion 1: 2.9270 s
+repeticion 2: 3.1003 s
+repeticion 3: 3.0659 s
+repeticion 4: 3.0364 s
+repeticion 5: 5.1368 s
+repeticion 6: 3.2602 s
+repeticion 7: 2.9787 s
+repeticion 8: 2.9884 s
+repeticion 9: 2.9801 s
+repeticion 10: 3.0531 s
+repeticion 11: 2.9310 s
+repeticion 12: 3.0522 s
+suma_distancias: 317
+
+### paralelo threads=10 schedule=dynamic,64
+carga: 1.10 s  (2000000 nodos, 37276447 amistades)
+threads: 10  schedule: dynamic,64
+pares: 100
+repeticion 1: 2.9391 s
+repeticion 2: 2.9313 s
+repeticion 3: 2.9106 s
+repeticion 4: 2.8921 s
+repeticion 5: 3.0217 s
+repeticion 6: 2.8995 s
+repeticion 7: 2.9049 s
+repeticion 8: 2.8675 s
+repeticion 9: 2.9244 s
+repeticion 10: 3.0474 s
+repeticion 11: 2.9280 s
+repeticion 12: 2.9095 s
+suma_distancias: 317
+
+### paralelo threads=10 schedule=dynamic,256
+carga: 1.18 s  (2000000 nodos, 37276447 amistades)
+threads: 10  schedule: dynamic,256
+pares: 100
+repeticion 1: 2.9990 s
+repeticion 2: 3.1631 s
+repeticion 3: 2.9691 s
+repeticion 4: 3.0738 s
+repeticion 5: 3.0404 s
+repeticion 6: 3.1135 s
+repeticion 7: 3.0070 s
+repeticion 8: 2.9593 s
+repeticion 9: 3.0450 s
+repeticion 10: 2.9141 s
+repeticion 11: 3.1101 s
+repeticion 12: 2.9895 s
+suma_distancias: 317
+
+### paralelo threads=10 schedule=dynamic,1024
+carga: 1.12 s  (2000000 nodos, 37276447 amistades)
+threads: 10  schedule: dynamic,1024
+pares: 100
+repeticion 1: 3.0146 s
+repeticion 2: 3.0829 s
+repeticion 3: 3.0044 s
+repeticion 4: 3.1225 s
+repeticion 5: 3.0114 s
+repeticion 6: 2.9871 s
+repeticion 7: 2.9860 s
+repeticion 8: 3.0654 s
+repeticion 9: 3.2894 s
+repeticion 10: 3.0646 s
+repeticion 11: 3.1190 s
+repeticion 12: 3.1652 s
+suma_distancias: 317
+
+### paralelo threads=1 schedule=dynamic,64
+carga: 1.07 s  (2000000 nodos, 37276447 amistades)
+threads: 1  schedule: dynamic,64
+pares: 100
+repeticion 1: 8.8408 s
+repeticion 2: 8.6705 s
+repeticion 3: 8.6579 s
+repeticion 4: 8.7577 s
+repeticion 5: 9.0707 s
+repeticion 6: 8.7403 s
+repeticion 7: 8.6622 s
+repeticion 8: 8.5463 s
+repeticion 9: 8.5753 s
+repeticion 10: 8.7148 s
+repeticion 11: 8.4919 s
+repeticion 12: 8.6495 s
+suma_distancias: 317
+
+### paralelo threads=2 schedule=dynamic,64
+carga: 0.98 s  (2000000 nodos, 37276447 amistades)
+threads: 2  schedule: dynamic,64
+pares: 100
+repeticion 1: 4.9501 s
+repeticion 2: 4.6320 s
+repeticion 3: 4.7034 s
+repeticion 4: 4.5965 s
+repeticion 5: 4.5458 s
+repeticion 6: 4.5084 s
+repeticion 7: 4.5279 s
+repeticion 8: 4.5158 s
+repeticion 9: 4.6421 s
+repeticion 10: 4.5183 s
+repeticion 11: 4.5686 s
+repeticion 12: 4.6247 s
+suma_distancias: 317
+
+### paralelo threads=4 schedule=dynamic,64
+carga: 1.04 s  (2000000 nodos, 37276447 amistades)
+threads: 4  schedule: dynamic,64
+pares: 100
+repeticion 1: 2.9620 s
+repeticion 2: 3.1958 s
+repeticion 3: 2.9722 s
+repeticion 4: 2.9430 s
+repeticion 5: 3.0293 s
+repeticion 6: 3.0152 s
+repeticion 7: 2.9708 s
+repeticion 8: 2.8972 s
+repeticion 9: 2.9353 s
+repeticion 10: 3.0662 s
+repeticion 11: 2.9102 s
+repeticion 12: 2.9657 s
+suma_distancias: 317
+
+### paralelo threads=6 schedule=dynamic,64
+carga: 1.01 s  (2000000 nodos, 37276447 amistades)
+threads: 6  schedule: dynamic,64
+pares: 100
+repeticion 1: 3.1117 s
+repeticion 2: 3.0138 s
+repeticion 3: 3.1145 s
+repeticion 4: 3.2260 s
+repeticion 5: 2.9360 s
+repeticion 6: 2.8961 s
+repeticion 7: 3.0109 s
+repeticion 8: 2.8866 s
+repeticion 9: 2.9866 s
+repeticion 10: 3.1189 s
+repeticion 11: 2.9859 s
+repeticion 12: 2.9588 s
+suma_distancias: 317
+
+### paralelo threads=8 schedule=dynamic,64
+carga: 1.02 s  (2000000 nodos, 37276447 amistades)
+threads: 8  schedule: dynamic,64
+pares: 100
+repeticion 1: 2.9280 s
+repeticion 2: 3.1004 s
+repeticion 3: 2.8739 s
+repeticion 4: 3.0118 s
+repeticion 5: 3.0169 s
+repeticion 6: 2.9575 s
+repeticion 7: 3.0974 s
+repeticion 8: 3.0231 s
+repeticion 9: 3.1485 s
+repeticion 10: 2.8990 s
+repeticion 11: 3.1086 s
+repeticion 12: 2.9454 s
+suma_distancias: 317
+
