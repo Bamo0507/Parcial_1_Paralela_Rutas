@@ -16,6 +16,14 @@ encontrar el camino más corto de conexiones entre un Usuario X y un Usuario Y.
 Las amistades no tienen peso, y la distribución de grados es fuertemente desbalanceada:
 la mayoría de usuarios tiene unos pocos amigos, mientras un puñado tiene decenas de miles.
 
+## Informe
+
+El reporte completo, con el contexto del problema, la estrategia de paralelización y los
+resultados de speedup y eficiencia de cada integrante, está en
+[docs/Parcial_1_Paralela_Rutas.pdf](docs/Parcial_1_Paralela_Rutas.pdf).
+Las gráficas y la tabla de resultados que lo respaldan están en
+[docs/graficas/](docs/graficas/) y [docs/tabla_resultados.md](docs/tabla_resultados.md).
+
 ## Estructura del repositorio
 
 ```
