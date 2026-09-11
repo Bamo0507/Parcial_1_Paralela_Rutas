@@ -1,0 +1,10 @@
+quien: Adriana
+fecha: 2026-09-10 23:55:55
+sistema: Darwin 25.6.0 arm64
+cpu: Apple M4
+threads maximos: 10
+compilador: Apple clang version 21.0.0 (clang-2100.1.1.101)
+grafo: datos/grafo.txt
+pares: bench/pares.txt (100 consultas)
+repeticiones: 12 (se descartan las primeras 2)
+schedule ganador: dynamic,256
