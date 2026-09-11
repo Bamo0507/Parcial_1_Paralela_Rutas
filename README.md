@@ -121,3 +121,19 @@ tiempo total por repetición. Es el modo que usan los scripts de `bench/`:
 OMP_NUM_THREADS=10 OMP_SCHEDULE="dynamic,64" ./paralelo/bfs_par datos/grafo.txt --lote bench/pares.txt --repeticiones 12
 ```
 
+### Benchmark completo y gráficas
+
+`bench/run_bench.sh` corre el secuencial, elige el scheduling con el máximo de threads y
+mide el escalamiento con el ganador. Deja los resultados en `bench/resultados/<quien>.csv`
+junto con la descripción de la máquina y la salida cruda de cada corrida:
+
+```bash
+bench/run_bench.sh --quien <nombre>
+```
+
+`bench/graficas.py` lee todos los CSV de `bench/resultados/` y genera las figuras de
+scheduling, speedup y eficiencia en `docs/graficas/`, más la tabla `docs/tabla_resultados.md`:
+
+```bash
+python bench/graficas.py
+```

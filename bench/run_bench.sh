@@ -64,7 +64,7 @@ correr_lote() {
     printf '### %s threads=%s schedule=%s\n%s\n\n' "$version" "$threads" "$schedule" "$salida" >> "$archivo_log"
 
     echo "$salida" | awk -v quien="$quien" -v version="$version" -v threads="$threads" -v schedule="$schedule" \
-        '/^repeticion/ { gsub(":", "", $2); print quien "," version "," threads "," schedule "," $2 "," $3 }' >> "$archivo_csv"
+        '/^repeticion/ { gsub(":", "", $2); print quien "," version "," threads ",\"" schedule "\"," $2 "," $3 }' >> "$archivo_csv"
 
     local suma_distancias
     suma_distancias=$(echo "$salida" | awk '/^suma_distancias/ { print $2 }')
